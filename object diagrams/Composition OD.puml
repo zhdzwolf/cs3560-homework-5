@@ -1,0 +1,74 @@
+@startuml
+'part 5
+object "mainFolder:Folder" as main {
+folderName = "php_demo1"
+}
+object "subFolder1:Folder" as source {
+folderName = "Source Files"
+}
+object "subFolder2:Folder" as phalcon {
+folderName = ".phalcon"
+}
+'object "subFolder3:Folder" as app {
+'folderName = "app"
+'}
+object "subFolder4:Folder" as config {
+folderName = "config"
+}
+object "subFolder5:Folder" as controllers {
+folderName = "controllers"
+}
+object "subFolder6:Folder" as library {
+folderName = "library"
+}
+object "subFolder7:Folder" as migrations {
+folderName = "migrations"
+}
+object "subFolder8:Folder" as models {
+folderName = "models"
+}
+object "subFolder9:Folder" as views {
+folderName = "views"
+}
+object "subFolder10:Folder" as cache {
+folderName = "cache"
+}
+object "subFolder11:Folder" as public {
+folderName = "public"
+}
+object "subFolder12:Folder" as includepath {
+folderName = "Include Path"
+}
+object "subFolder13:Folder" as remote {
+folderName = "Remote Files"
+}
+
+object "file1:File" as htaccess {
+fileName = ".htaccess"
+}
+object "file2:File" as htrouter {
+fileName = ".htrouter.php"
+}
+object "file3:File" as index {
+fileName = ".index.html"
+}
+
+main *-- source
+source *-- phalcon
+'source *-- app
+'app *-- config
+'app *-- controllers
+'app *-- library
+'app *-- migrations
+'app *-- models
+'app *-- views
+source *-- cache
+source *-- public
+main *-- includepath
+main *-- remote
+
+public *-- htaccess
+public *-- htrouter
+public *-- index
+
+@enduml

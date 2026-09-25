@@ -1,0 +1,23 @@
+@startuml
+'part 3
+object "ship1:Ship" as s1 {
+shipName = "survivors of the void"
+buildYear = "2022"
+}
+
+object "ship2:CruiseShip" as s2 {
+shipName = "seekers of the void"
+buildYear =
+passengers = 2
+}
+
+object "ship3:CargoShip" as s3 {
+shipName = "alloyed collective"
+buildYear =
+tonnage = 7
+}
+
+s1 <|-- s2
+s1 <|-- s3
+
+@enduml

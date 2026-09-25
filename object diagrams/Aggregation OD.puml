@@ -1,0 +1,26 @@
+@startuml
+'part 4
+object "course1:Course" as c1 {
+courseName = "CS3560"
+instructor = instructor1
+textbook = textbook1
+}
+
+object "instructor1:Instructor" as i1 {
+instructorFirstName = "Nima"
+instructorLastName = "Davarpanah"
+officeNumber = "3-2636"
+}
+
+object "textbook1:Textbook" as t1 {
+title = "Clean Code"
+author = "Robert C. Martin"
+publisher = "Addison-Wesley Professional"
+}
+
+c1 o-- i1
+c1 o-- t1
+c1 --> i1
+c1 --> t1
+
+@enduml
